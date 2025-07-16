@@ -1,0 +1,18 @@
+========== TO CREATE CLUSTER AND DEPLOY ==========
+
+1. eksctl create cluster -f cluster-config.yaml
+2. kubectl apply -f ingressclass.yaml
+3. kubectl create namespace colour-picker --save-config
+4. kubectl apply -n colour-picker -f deploy.yaml
+5. kubectl get ingress -n colour-picker
+
+
+========== TO UPDATE DEPLOYMENT ==========
+
+1. Update deploy.yaml (eg. image tag)
+2. kubectl apply -n colour-picker -f deploy.yaml
+
+
+========== TO DELETE CLUSTER ==========
+
+eksctl delete cluster -f ./cluster-config.yaml
