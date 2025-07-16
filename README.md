@@ -16,12 +16,13 @@ This repo contains the scripts to create the a cluster on AWS EKS and deploy an 
 
 Run the following commands
 
-1. `eksctl create cluster -f cluster-config.yaml` (this can take a while to create on AWS so bear with it)
-2. `kubectl apply -f ingressclass.yaml`
-3. `kubectl create namespace colour-picker --save-config`
-4. `kubectl apply -n colour-picker -f deploy.yaml`
-5. `kubectl get ingress -n colour-picker`
-6. Copy the ADDRESS from the above command and paste into browser (if it returns an error, give it a little while and refresh or run `kubectl get deployments -n colour-picker` to check if the deployment is available)
+1. Clone this repo and `cd` into the directory
+2. `eksctl create cluster -f cluster-config.yaml` (this can take a while to create on AWS so bear with it)
+3. `kubectl apply -f ingressclass.yaml`
+4. `kubectl create namespace colour-picker --save-config`
+5. `kubectl apply -n colour-picker -f deploy.yaml`
+6. `kubectl get ingress -n colour-picker`
+7. Copy the ADDRESS from the above command and paste into browser (if it returns an error, give it a little while and refresh or run `kubectl get deployments -n colour-picker` to check if the deployment is available)
 
 ## To update the app
 
