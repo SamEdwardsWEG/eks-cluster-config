@@ -24,6 +24,10 @@ Run the following commands
 6. `kubectl get ingress -n colour-picker`
 7. Copy the ADDRESS from the above command and paste into browser (if it returns an error, give it a little while and refresh or run `kubectl get deployments -n colour-picker` to check if the deployment is available)
 
+You should be presented with the below
+
+![Screenshot](./screenshot.JPG)
+
 ## To update the app
 
 1. Update deploy.yaml (e.g. change the image tag)
