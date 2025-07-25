@@ -5,5 +5,25 @@ metadata:
   name: colour-picker
   region: eu-west-1
 
-autoModeConfig:
-  enabled: true
+
+managedNodeGroups:
+  - name: ng-1
+    instanceType: t2.small
+    desiredCapacity: 3
+    volumeSize: 20
+    labels: {role: worker}
+    tags:
+      nodegroup-role: worker
+    iam:
+      withAddonPolicies:
+        albIngress: true
+
+
+# cloudWatch:
+#   clusterLogging:
+#     enableTypes: ["*"]
+
+
+
+# autoModeConfig:
+#   enabled: true
